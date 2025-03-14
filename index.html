@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы для Алисы</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@300;700&display=swap');
+
+        body {
+            background: #080808 url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+            color: #e0e0e0;
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .category {
+            font-size: 28px;
+            text-transform: uppercase;
+            margin: 40px 0 20px;
+            color: #ff0080;
+            text-shadow: 0 0 10px #ff0080;
+        }
+
+        .movie {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 0, 128, 0.5);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .movie:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin: 10px 0;
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        .desc {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        a {
+            color: #ff0080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Фильмы для Алисы</h1>
+    <div class="container">
+
+        <div class="category">Реализм и драма</div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/e/ef/Everybody_Dies_But_Me_poster.jpg" alt="Все умрут, а я останусь">
+            <div class="title">Все умрут, а я останусь (2008)</div>
+            <div class="desc">Драма о подростках, вечеринках и их внутренних конфликтах.</div>
+            <a href="https://www.kinopoisk.ru/film/409228/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/4/47/Rusalka_2007.jpg" alt="Русалка">
+            <div class="title">Русалка (2007)</div>
+            <div class="desc">Грустная и мистическая история девушки, мечтающей изменить мир.</div>
+            <a href="https://www.kinopoisk.ru/film/277537/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/d/db/Leto_2018.jpg" alt="Лето">
+            <div class="title">Лето (2018)</div>
+            <div class="desc">Фильм о свободе, музыке и юности, основанный на жизни Виктора Цоя.</div>
+            <a href="https://www.kinopoisk.ru/film/1049926/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="category">Стиль и эстетика</div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/NeonDemon.png/220px-NeonDemon.png" alt="Неоновый демон">
+            <div class="title">Неоновый демон (2016)</div>
+            <div class="desc">Стильный и мрачный взгляд на мир модельного бизнеса.</div>
+            <a href="https://www.kinopoisk.ru/film/841747/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/7/73/Enter_the_Void_2009.jpg" alt="Вход в пустоту">
+            <div class="title">Вход в пустоту (2009)</div>
+            <div class="desc">Экспериментальное кино с необычной подачей и визуалом.</div>
+            <a href="https://www.kinopoisk.ru/film/405086/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="category">Неон и мистика</div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/c/ca/BladeRunner2049.jpg" alt="Бегущий по лезвию 2049">
+            <div class="title">Бегущий по лезвию 2049 (2017)</div>
+            <div class="desc">Атмосферный киберпанк с невероятной визуальной эстетикой.</div>
+            <a href="https://www.kinopoisk.ru/film/589290/" target="_blank">Смотреть</a>
+        </div>
+
+        <div class="movie">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/4/44/Only_God_Forgives.jpg" alt="Только Бог простит">
+            <div class="title">Только Бог простит (2013)</div>
+            <div class="desc">Стильный, мрачный и гипнотический фильм от Николаса Виндинга Рефна.</div>
+            <a href="https://www.kinopoisk.ru/film/693031/" target="_blank">Смотреть</a>
+        </div>
+
+    </div>
+
+    <div class="footer">Сайт создан для Алисы ❤️</div>
+
+</body>
+</html>
