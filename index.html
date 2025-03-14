@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фильмы для Алисы</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@300;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@300;700&display=swap');
 
         body {
             background: #080808 url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
@@ -13,12 +13,18 @@
             font-family: 'Raleway', sans-serif;
             text-align: center;
             padding: 20px;
+            transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 36px;
+            font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
             text-shadow: 0 0 15px #ff0080, 0 0 30px #ff0080;
+            line-height: 1.5;
+            white-space: pre-line;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
         }
 
         .container {
@@ -32,6 +38,8 @@
             margin: 40px 0 20px;
             color: #ff0080;
             text-shadow: 0 0 10px #ff0080;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
         .movie {
@@ -41,11 +49,14 @@
             margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 0, 128, 0.3);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+            opacity: 0;
+            animation: fadeIn 2.5s forwards;
         }
 
         .movie:hover {
             transform: scale(1.05);
+            background: rgba(255, 0, 128, 0.2);
         }
 
         img {
@@ -73,15 +84,47 @@
             text-shadow: 0 0 5px #ff0080;
         }
 
+        .theme-button {
+            background: #ff0080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .theme-button:hover {
+            background: #ff0066;
+        }
+
         .footer {
             margin-top: 50px;
             font-size: 14px;
             opacity: 0.6;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dark-mode {
+            background: #f0f0f0;
+            color: #222;
+        }
     </style>
 </head>
 <body>
-    <h1>Фильмы для Алисы</h1>
+
+    <h1>Фильмы  
+        для  
+        Алисы</h1>
+
+    <button class="theme-button" onclick="toggleTheme()">Сменить тему</button>
+
     <div class="container">
 
         <div class="category">Реализм и драма</div>
@@ -100,13 +143,6 @@
             <a href="https://www.kinopoisk.ru/film/277537/" target="_blank">Смотреть</a>
         </div>
 
-        <div class="movie">
-            <img src="https://upload.wikimedia.org/wikipedia/ru/d/db/Leto_2018.jpg" alt="Лето">
-            <div class="title">Лето (2018)</div>
-            <div class="desc">Фильм о свободе, музыке и юности, основанный на жизни Виктора Цоя.</div>
-            <a href="https://www.kinopoisk.ru/film/1049926/" target="_blank">Смотреть</a>
-        </div>
-
         <div class="category">Стиль и эстетика</div>
 
         <div class="movie">
@@ -123,25 +159,15 @@
             <a href="https://www.kinopoisk.ru/film/405086/" target="_blank">Смотреть</a>
         </div>
 
-        <div class="category">Неон и мистика</div>
-
-        <div class="movie">
-            <img src="https://upload.wikimedia.org/wikipedia/ru/c/ca/BladeRunner2049.jpg" alt="Бегущий по лезвию 2049">
-            <div class="title">Бегущий по лезвию 2049 (2017)</div>
-            <div class="desc">Атмосферный киберпанк с невероятной визуальной эстетикой.</div>
-            <a href="https://www.kinopoisk.ru/film/589290/" target="_blank">Смотреть</a>
-        </div>
-
-        <div class="movie">
-            <img src="https://upload.wikimedia.org/wikipedia/ru/4/44/Only_God_Forgives.jpg" alt="Только Бог простит">
-            <div class="title">Только Бог простит (2013)</div>
-            <div class="desc">Стильный, мрачный и гипнотический фильм от Николаса Виндинга Рефна.</div>
-            <a href="https://www.kinopoisk.ru/film/693031/" target="_blank">Смотреть</a>
-        </div>
-
     </div>
 
     <div class="footer">Сайт создан для Алисы ❤️</div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 
 </body>
 </html>
